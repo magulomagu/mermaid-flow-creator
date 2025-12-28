@@ -1,0 +1,5 @@
+{
+  "name": "Mermaid Flow Creator",
+  "description": "An AI-powered tool that converts natural language task descriptions into professional Mermaid.js diagrams like flowcharts, sequence diagrams, and state transitions.",
+  "requestFramePermissions": []
+}
