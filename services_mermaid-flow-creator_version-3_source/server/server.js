@@ -240,6 +240,24 @@ app.get('/service-worker.js', (req, res) => {
    return res.sendFile(path.join(publicPath, 'service-worker.js'));
 });
 
+app.get('/favicon.ico', (req, res) => {
+    const faviconPath = path.join(staticPath, 'favicon.ico');
+    if (fs.existsSync(faviconPath)) {
+        res.sendFile(faviconPath);
+    } else {
+        res.sendFile(path.join(publicPath, 'favicon.ico'));
+    }
+});
+
+app.get('/favicon.png', (req, res) => {
+    const faviconPath = path.join(staticPath, 'favicon.png');
+    if (fs.existsSync(faviconPath)) {
+        res.sendFile(faviconPath);
+    } else {
+        res.sendFile(path.join(publicPath, 'favicon.png'));
+    }
+});
+
 app.use('/public', express.static(publicPath));
 app.use(express.static(staticPath));
 
